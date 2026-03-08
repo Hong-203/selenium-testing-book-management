@@ -60,11 +60,3 @@ jobs:
         with:
           name: test-screenshots
           path: screenshots
-
-      - name: Publish Test Report
-        if: always()
-        uses: dorny/test-reporter@v1
-        with:
-          name: Selenium Test Results
-          path: target/surefire-reports/*.xml
-          reporter: java-testng
